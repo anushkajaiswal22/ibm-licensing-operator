@@ -3,6 +3,8 @@ kind: Role
 metadata:
   name: argo-cd-manage-deployments
   namespace: ibm-ls-reporter
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 rules:
   - apiGroups:
       - apps
@@ -22,6 +24,8 @@ kind: Role
 metadata:
   name: argo-cd-manage-serviceaccounts
   namespace: ibm-ls-reporter
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 rules:
   - apiGroups:
       - ""
@@ -41,6 +45,8 @@ kind: Role
 metadata:
   name: argo-cd-manage-reporters
   namespace: ibm-ls-reporter
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 rules:
   - apiGroups:
       - operator.ibm.com
@@ -60,6 +66,8 @@ kind: RoleBinding
 metadata:
   name: argo-cd-manage-deployments-binding
   namespace: ibm-ls-reporter
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -74,6 +82,8 @@ kind: RoleBinding
 metadata:
   name: argo-cd-manage-serviceaccounts-binding
   namespace: ibm-ls-reporter
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -88,6 +98,8 @@ kind: RoleBinding
 metadata:
   name: argo-cd-manage-reporters-binding
   namespace: ibm-ls-reporter
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role

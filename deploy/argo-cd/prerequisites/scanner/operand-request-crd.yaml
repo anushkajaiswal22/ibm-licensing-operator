@@ -4,6 +4,7 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.14.0
+    argocd.argoproj.io/sync-wave: "-2"
   labels:
     app.kubernetes.io/instance: operand-deployment-lifecycle-manager
     app.kubernetes.io/managed-by: operand-deployment-lifecycle-manager

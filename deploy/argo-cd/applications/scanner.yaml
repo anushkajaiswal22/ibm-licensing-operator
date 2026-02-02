@@ -4,6 +4,8 @@ metadata:
   name: ibm-license-service-scanner
   finalizers:
     - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   project: default
   destination:
@@ -15,3 +17,6 @@ spec:
     - repoURL: "https://github.com/IBM/ibm-licensing-operator"
       targetRevision: "master"
       path: deploy/argo-cd/components/scanner/helm
+    - helm: 
+        valuesObject: 
+          licenseServiceNamespace: ibm-licensing
