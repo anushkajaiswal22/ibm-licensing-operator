@@ -11,6 +11,7 @@ spec:
   namespace: 'openshift-gitops'
   destination:
     server: https://kubernetes.default.svc
+    namespace: 'ibm-licensing'
   sources:
     - repoURL: "https://github.com/IBM/ibm-licensing-operator"
       targetRevision: "master"
