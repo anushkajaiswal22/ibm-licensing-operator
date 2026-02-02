@@ -6,6 +6,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
   annotations:
     argocd.argoproj.io/sync-wave: "0"
+  namespace: 'openshift-gitops'
 spec:
   project: default
   destination:
