@@ -18,4 +18,4 @@ spec:
       path: deploy/argo-cd/components/license-service/helm-cluster-scoped
       helm:
         valuesObject:
-          watchNamespace: ibm-licensing,ibm-licensing-scanner
+          watchNamespace: ibm-licensing
